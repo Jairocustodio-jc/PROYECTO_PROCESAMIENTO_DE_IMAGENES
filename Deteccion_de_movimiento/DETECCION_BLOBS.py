@@ -17,15 +17,15 @@ def draw_rectangle_from_keypoints(frame, keypoints):
         )
     return frame
 
-
+#CAMBIO 1
 # Read image
 im = cv2.imread("blob3.png", cv2.IMREAD_GRAYSCALE)
 
 ret, binary_frame = cv2.threshold(im,15,255,cv2.THRESH_BINARY)
-
+# CAMBIO 2
 # Create a detector with the parameters
 detector = cv2.SimpleBlobDetector_create()
-
+# CAMBIO 3
 # Detect blobs.
 keypoints = detector.detect(im)
 
